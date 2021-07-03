@@ -39,10 +39,11 @@ void loop() {
     display.setTextSize(1);
     display.setTextColor(WHITE);
     display.setCursor(0,0);
-    display.print("Inside temp (C):"); display.println(temperatureC);
+    display.print("Inside temp (C):"); display.println(temperatureC); //prints the temp in Celsius with a unit for clarity
     display.display();
-    display.print("Inside temp (F):"); display.print(temperatureF);
+    display.print("Inside temp (F):"); display.print(temperatureF); // prints the temp in Fahrenheit  with a unit for clarity
     display.display();
-    Serial.print(temperatureC); Serial.print(","); Serial.println(temperatureF);
+    Serial.print(reading); Serial.print(temperatureC); Serial.print(","); Serial.println(temperatureF); //prints the different values I should be seeing on my OLED into my
+                                                                                                        //serial monitor so I can make sure the OLED is working correctly.
 delay(500);
 }
